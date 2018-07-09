@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
 import QueryDlg from './QueryDlg';
 
 const yphone_icon = require('../img/yphone_icon.png');

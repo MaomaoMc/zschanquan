@@ -61,37 +61,38 @@ input {
   width: 1200px;
   margin: 0 auto; }
 
+.head {
+  height: 58px;
+  background-color: #19296c;
+  border-bottom: 1px solid #06a9fd; }
+  .head .w_1200 {
+    height: 100%; }
+    .head .w_1200 i {
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
+    .head .w_1200 i.logo {
+      width: 159px;
+      height: 31px;
+      background-image: url(../img/pic_logo.png);
+      margin-top: 13px; }
+    .head .w_1200 i.phone_icon {
+      width: 35px;
+      height: 34px;
+      background-image: url(../img/24_phone.png);
+      margin-right: 5px;
+      margin-top: 4px; }
+    .head .w_1200 div.f_rt {
+      margin-top: 8px; }
+      .head .w_1200 div.f_rt p {
+        font-style: oblique; }
+
 .banner {
   height: 795px;
   background-image: url(../img/banner_bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center top; }
-  .banner .head {
-    height: 58px;
-    background-color: #19296c;
-    border-bottom: 1px solid #06a9fd; }
-    .banner .head .w_1200 {
-      height: 100%; }
-      .banner .head .w_1200 i {
-        vertical-align: middle;
-        background-repeat: no-repeat;
-        background-size: 100% 100%; }
-      .banner .head .w_1200 i.logo {
-        width: 159px;
-        height: 31px;
-        background-image: url(../img/pic_logo.png);
-        margin-top: 13px; }
-      .banner .head .w_1200 i.phone_icon {
-        width: 35px;
-        height: 34px;
-        background-image: url(../img/24_phone.png);
-        margin-right: 5px;
-        margin-top: 4px; }
-      .banner .head .w_1200 div.f_rt {
-        margin-top: 8px; }
-        .banner .head .w_1200 div.f_rt p {
-          font-style: oblique; }
   .banner .banner_items .notice {
     height: 45px;
     background: -webkit-linear-gradient(left, rgba(6, 169, 253, 0.05), rgba(6, 169, 253, 0.3), rgba(6, 169, 253, 0.3), rgba(6, 169, 253, 0.05));
