@@ -5,7 +5,7 @@ import qs from 'qs';
 import '../css/main.css';
 import QueryForm from './QueryForm';
 import QueryDlg from './QueryDlg';
-import Shadow from './Shadow';
+import Footer from './Footer';
 
 const tabs = [
     {"text": "商标注册多少钱？"},
@@ -82,8 +82,32 @@ class Main extends Component{
             }
         })
     }
+    scrollFun (){
+        let index = 0;
+        const self = this;
+        const height = 30, len = 9,
+         result_top = this.state.result_top;
+        setInterval(function(){
+            if(index === 8){ 
+                index = 0;
+            }
+            let top = 0;
+            setInterval(function(){
+                if(top == 30){
+                    return;
+                }else{
+                    top = top + 30/30;
+                }
+                self.setState({
+                    result_top: -(index * height + top)
+                })
+            }, 30);
+            self.state.result_top < 0 ? index ++ : index = 0;
+        }, 2000)
+    }
     componentDidMount (){
         this.fetchIndustrys();
+        this.scrollFun();
     }
     render (){
         const self = this,
@@ -98,15 +122,15 @@ class Main extends Component{
                         <div className = "f_rt">
                             <i className = "icon phone_icon f_lt"></i>
                             <div className = "f_lt">
-                                <p className = "fc_white" style = {{fontSize: "14px"}}>24小时免费服务热线</p>
-                                <p className = "fc_white" style = {{fontSize: "18px"}}>400-100-9050</p>
+                                <p style = {{fontSize: "14px"}}>24小时免费服务热线</p>
+                                <p style = {{fontSize: "18px"}}>400-100-9050</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className = "banner_items">
-                    <p className = "fc_white text_center fz_30">明世-中国专业<span className = "fc_yellow">商标注册</span>服务平台</p>
-                    <div className = "notice fc_white">
+                    <p className = "text_center fz_30">明世-中国专业<span className = "fc_yellow">商标注册</span>服务平台</p>
+                    <div className = "notice">
                         <div className = "w_1200">
                             <span className = "f_lt">
                                 <i className = "icon notice_icon"></i>
@@ -158,15 +182,19 @@ class Main extends Component{
                                     <p style = {{width: "350px", lineHeight: "30px", margin: "0 auto"}}>目前已有<span style = {{color: "#ff6000"}}>6232323</span>次查询</p>
                                     <div>
                                         <ul className = "result" style = {{top: this.state.result_top}}>
-                                            <li>撒的</li>
-                                            <li>淡粉色的</li>
-                                            <li>似懂非懂是人生</li>
-                                            <li>习惯性的同学</li>
-                                            <li>法国的同时</li>
-                                            <li>吃个饭蛋糕</li>
-                                            <li>大概是认同感</li>
-                                            <li>大概这首歌</li>
-                                            <li>敢死队员的关怀</li>
+                                            <li>1500**7866 氧*派 28类 的通过率为**% </li>
+                                            <li>1881**8338 麦*园 32类 的通过率为**% </li>
+                                            <li>1381**9654 查询 林*轩 的通过率为**%</li>
+                                            <li>1312**3226 良*铺 12类 的通过率为**% </li>
+                                            <li>1350**2788 龙*镇 8类 的通过率为**% </li>
+                                            <li>1581**3376 玉*川 23类 的通过率为**% </li>
+                                            <li>1391**9596 牛*山 36类 的通过率为**% </li>
+                                            <li>1343**2744 趣*鼠 18类 的通过率为**% </li>
+                                            <li>1851**5186 果*约 42类 的通过率为**% </li>
+                                            <li>1500**7866 氧*派 28类 的通过率为**% </li>
+                                            <li>1881**8338 麦*园 32类 的通过率为**% </li>
+                                            <li>1381**9654 查询 林*轩 的通过率为**%</li>
+                                            <li>1312**3226 良*铺 12类 的通过率为**% </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -276,6 +304,7 @@ class Main extends Component{
                 </div>
             </div>
             <QueryDlg queryDlgShow = {this.state.queryDlgShow} newone = {this.state.newone}/>
+            <Footer />
         </div>
     }
 }

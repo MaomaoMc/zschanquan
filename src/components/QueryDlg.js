@@ -13,7 +13,7 @@ class QueryDlg extends Component{
         }
     }
     componentDidUpdate(nextProps, nextState){
-        if(nextProps !== this.props){
+        if(nextProps.queryDlgShow !== this.props.queryDlgShow){
             this.setState({
                 queryDlgShow: this.props.queryDlgShow
             })
