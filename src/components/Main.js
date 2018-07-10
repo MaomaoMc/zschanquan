@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import axios from 'axios';
 import qs from 'qs';
-import '../css/main.css';
 import QueryForm from './QueryForm';
 import QueryDlg from './QueryDlg';
 import Footer from './Footer';
@@ -115,7 +114,7 @@ class Main extends Component{
         name = this.state.name,
         industry = this.state.industry;
         return <div>
-            <div className="banner">
+            <div className= "banner">
                 <div className="head">
                     <div className = "w_1200">
                         <i className = "icon logo f_lt"></i>
